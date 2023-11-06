@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitty Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="w3.css">
+</head>
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="title">Kitty Kitchen</div>
+            <div id="desc">
+                This website for all things culinary, designed to ignite your passion for food exploration. It's the perfect companion for anyone with an appetite for discovering, cooking, and savoring a wide range of delectable dishes. Find inspiration for your next meal effortlessly, whether you're searching for quick weeknight dinner ideas, decadent desserts, or healthy options. Kitty Kitchen offers an extensive library of recipes to suit any occasion.
+            </div>
+            <div id="search-bar">
+                <input type="search" id="category" placeholder="Search here for purrsipe">
+                <span id="search"><a href="#search-food"><i class="fa fa-search"></i></a></span>
+            </div>
+        </div>
+
+        <div id="recipe">
+            <div id="random-section">
+                <div class="subtitle">Random Purrsipe</div>
+                <div id="random-food"></div>
+            </div>
+
+            
+
+            <div id="search-section">
+                <div class="subtitle">Purrsipe that you searched</div>
+                <div id="search-food"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
