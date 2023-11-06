@@ -48,8 +48,9 @@ function printRandomData(data){
 // Category Search Recipe
 function printSearchData(data){
 
+    document.getElementById("search-section").innerHTML = `<div class="subtitle">Purrsipe that you searched</div><div id="search-food"></div>`
+
     const window = document.getElementById("search-food")
-    let text = ""
 
     data.forEach((item,index) => {
 
@@ -67,7 +68,7 @@ function printSearchData(data){
                 }
             }
 
-            text += `<div class="food-card" onclick="document.getElementById('idno${index}').style.display='block'">
+            window.innerHTML += `<div class="food-card" onclick="document.getElementById('idno${index}').style.display='block'">
                     <img src="${item.strMealThumb}" alt="food-img">
                     <div class="food-name">${item.strMeal}</div>
                 </div>
@@ -90,11 +91,10 @@ function printSearchData(data){
                         </table>
                     </div>
                 </div>`
-
-            window.innerHTML += text
         })
         .catch(err => console.log(err))        
     })
+
 }
 
 // Ingredent search
