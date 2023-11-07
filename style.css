@@ -131,16 +131,6 @@ body{
     width: 280px;
 }
 
-.food-card:hover{
-    box-shadow: 2px 2px 20px #000;
-    transform: translate(-2px,-2px);
-}
-
-.food-card:active{
-    box-shadow: none;
-    transform: translate(0,0);
-}
-
 .food-name{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -170,6 +160,7 @@ img[alt="food-img"]{
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+    border-bottom: 2px solid black;
 }
 
 /* For Modal */
