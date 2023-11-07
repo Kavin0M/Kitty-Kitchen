@@ -130,12 +130,20 @@ const button = document.getElementById("search")
 
 button.onclick = () => {
     let category = document.getElementById("category").value.toLowerCase()
-    category = category[0].toUpperCase() + category.substring(1)
 
-    axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
-    .then(res => {
-        printSearchData(res.data.meals)
-        window.open("#search-section","_self")
-    })
-    .catch(err => console.log(err))
+    if (category){
+        category = category[0].toUpperCase() + category.substring(1)
+
+        axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+        .then(res => {
+            printSearchData(res.data.meals)
+            window.open("#search-section","_self")
+        })
+        .catch(err => console.log(err))
+    }
+    else{
+        alert("Enter a value")
+    }
+
+    
 }
