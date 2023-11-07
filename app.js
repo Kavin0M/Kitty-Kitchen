@@ -72,7 +72,7 @@ function printRandomData(data){
                         <header class="w3-container w3-teal">
                             <span onclick="document.getElementById('random-ingredient').style.display='none'"
                             class="w3-button w3-display-topright">&times;</span>
-                            <h2>${data.strMeal}</h2>
+                            <h2>Ingredients</h2>
                         </header>
 
                         <table class="w3-table w3-border">
@@ -145,7 +145,7 @@ function printSearchData(data){
                         <header class="w3-container w3-teal">
                             <span onclick="document.getElementById('ingredient${index}').style.display='none'"
                             class="w3-button w3-display-topright">&times;</span>
-                            <h2>${item.strMeal}</h2>
+                            <h2>Ingredients</h2>
                         </header>
 
                         <table class="w3-table w3-border">
