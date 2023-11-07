@@ -71,6 +71,27 @@ body{
     background-color: #FCFAF9;
 }
 
+#categories{
+    display: flex;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.name{
+    background-color: #FCFAF9;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+#some-text{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
 /* Recipe */
 .subtitle{
     font-family: 'Poppins', sans-serif;

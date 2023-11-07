@@ -1,3 +1,36 @@
+// Category
+axios.get("https://www.themealdb.com/api/json/v1/1/categories.php")
+.then(res => printCategory(res.data.categories).then(() => {
+    search()
+}))
+
+function printCategory(data){
+
+    return new Promise((resolve,reject) => {
+        const window = document.getElementById("categories")
+
+        data.forEach(item => {
+            window.innerHTML += `<div class="name">${item.strCategory}</div>`
+        })
+
+        resolve()
+    })
+}
+
+function search(){
+    const buttons = document.getElementsByClassName("name")
+    for (let i = 0; i<buttons.length; i++){
+        buttons[i].onclick = (e) => {
+            axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${e.target.textContent}`)
+            .then(res => {
+                printSearchData(res.data.meals)
+                window.open("#search-section","_self")
+            })
+            .catch(err => console.log(err))
+        }
+    }
+}
+
 // Random Recipe
 axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
 .then(res => printRandomData(res.data.meals[0]))
