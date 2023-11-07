@@ -8,7 +8,6 @@ function printRandomData(data){
     const window = document.getElementById("random-food")
 
     let tableData = ""
-
     for (let i = 0; i<=20; i++){
         if (data[`strIngredient${i}`]){
             tableData += `<tr>
@@ -18,7 +17,7 @@ function printRandomData(data){
         }
     }
 
-    let text = `<div class="food-card" onclick="document.getElementById('random-model').style.display='block'">
+    window.innerHTML = `<div class="food-card" onclick="document.getElementById('random-model').style.display='block'">
                     <img src="${data.strMealThumb}" alt="food-img">
                     <div class="food-name">${data.strMeal}</div>
                 </div>
@@ -41,21 +40,17 @@ function printRandomData(data){
                         </table>
                     </div>
                 </div>`
-
-    window.innerHTML += text
 }
 
 // Category Search Recipe
 function printSearchData(data){
 
     document.getElementById("search-section").innerHTML = `<div class="subtitle">Purrsipe that you searched</div><div id="search-food"></div>`
-
     const window = document.getElementById("search-food")
 
     data.forEach((item,index) => {
 
         let tableData = ""
-
         axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${item.idMeal}`)
         .then(res => {
             
@@ -94,7 +89,6 @@ function printSearchData(data){
         })
         .catch(err => console.log(err))        
     })
-
 }
 
 // Ingredent search
