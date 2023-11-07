@@ -50,6 +50,13 @@ function printRandomData(data){
         }
     }
 
+    let instruction = ""
+    data.strInstructions.split(".").forEach((item,index) => {
+        if(item){
+            instruction += `<div>STEP ${index+1}: ${item}</div>`
+        }
+    })
+
     window.innerHTML = `<div class="food-card">
                     <img src="${data.strMealThumb}" alt="food-img">
                     <div class="buttons">
@@ -88,7 +95,7 @@ function printRandomData(data){
                         </header>
 
                         <div class="w3-container w3-padding-16">
-                          ${data.strInstructions}
+                          ${instruction}
                         </div>
 
                     </div>
@@ -115,6 +122,13 @@ function printSearchData(data){
                                     </tr>`
                 }
             }
+
+            let instruction = ""
+            res.data.meals[0].strInstructions.split(".").forEach((item,index) => {
+                if(item){
+                    instruction += `<div>STEP ${index+1}: ${item}</div>`
+                }
+            })
 
             window.innerHTML += `<div class="food-card">
                     <img src="${item.strMealThumb}" alt="food-img">
@@ -154,7 +168,7 @@ function printSearchData(data){
                         </header>
 
                         <div class="w3-container w3-padding-16">
-                          ${res.data.meals[0].strInstructions}
+                          ${instruction}
                         </div>
 
                     </div>
