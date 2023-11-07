@@ -129,7 +129,7 @@ body{
     border-radius: 20px;
     cursor: pointer;
     height: 300px;
-    width: 300px;
+    width: 280px;
 }
 
 .food-card:hover{
@@ -150,14 +150,13 @@ body{
     border-radius: 0 0 20px 20px;
     width: 100%;
     text-align: center;
-    justify-self: flex-end;
 }
 
 img[alt="food-img"]{
     margin: 1rem;
     height: 200px;
     border-radius: 20px;
-    justify-self: center;
+    margin-top: 30px;
 }
 
 /* For Modal */
