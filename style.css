@@ -127,7 +127,6 @@ body{
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
-    cursor: pointer;
     height: 300px;
     width: 280px;
 }
@@ -168,6 +167,9 @@ img[alt="food-img"]{
     padding: 0.5rem;
     background-color: #FCFAF9;
     border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 /* For Modal */
